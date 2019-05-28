@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { JediService } from './car.service';
+import { JediService } from './jedi.service';
 
 describe('JediService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

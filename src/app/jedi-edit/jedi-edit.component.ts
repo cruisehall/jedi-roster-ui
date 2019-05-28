@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { JediService } from '../shared/car/car.service';
+import { JediService } from '../shared/jedi/jedi.service';
 import { NgForm } from '@angular/forms';
 import { GiphyService } from '../shared/giphy/giphy.service';
 
