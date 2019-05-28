@@ -5,17 +5,17 @@ import { Observable } from 'rxjs';
 @Injectable({providedIn: 'root'})
 export class JediService {
   public API = '//localhost:8080';
-  public CAR_API = this.API + '/cars';
+  public JEDI_API = this.API + '/jedis';
 
   constructor(private http: HttpClient) {
   }
 
   getAll(): Observable<any> {
-    return this.http.get(this.API + '/cool-cars');
+    return this.http.get(this.API + '/cool-jedis');
   }
 
   get(id: string) {
-    return this.http.get(this.CAR_API + '/' + id);
+    return this.http.get(this.JEDI_API + '/' + id);
   }
 
   save(car: any): Observable<any> {
@@ -23,7 +23,7 @@ export class JediService {
     if (car['href']) {
       result = this.http.put(car.href, car);
     } else {
-      result = this.http.post(this.CAR_API, car);
+      result = this.http.post(this.JEDI_API, car);
     }
     return result;
   }

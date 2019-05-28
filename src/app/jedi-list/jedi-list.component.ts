@@ -8,14 +8,14 @@ import { GiphyService } from '../shared/giphy/giphy.service';
   styleUrls: ['./jedi-list.component.css']
 })
 export class JediListComponent implements OnInit {
-  cars: Array<any>;
+  jedis: Array<any>;
 
   constructor(private carService: JediService, private giphyService: GiphyService) { }
 
   ngOnInit() {
     this.carService.getAll().subscribe(data => {
-      this.cars = data;
-      for (const car of this.cars) {
+      this.jedis = data;
+      for (const car of this.jedis) {
         this.giphyService.get(car.name).subscribe(url => car.giphyUrl = url);
       }
     });
