@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { JediListComponent } from './car-list/car-list.component';
-import { JediEditComponent } from './car-edit/car-edit.component';
+import { JediListComponent } from './jedi-list/jedi-list.component';
+import { JediEditComponent } from './jedi-edit/jedi-edit.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -11,15 +11,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'car-list',
+    path: 'jedi-list',
     component: JediListComponent
   },
   {
-    path: 'car-add',
+    path: 'jedi-add',
     component: JediEditComponent
   },
   {
-    path: 'car-edit/:id',
+    path: 'jedi-edit/:id',
     component: JediEditComponent
   }
 ];

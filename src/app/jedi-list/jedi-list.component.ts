@@ -3,9 +3,9 @@ import { JediService } from '../shared/car/car.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
 
 @Component({
-  selector: 'app-car-list',
-  templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.css']
+  selector: 'app-jedi-list',
+  templateUrl: './jedi-list.component.html',
+  styleUrls: ['./jedi-list.component.css']
 })
 export class JediListComponent implements OnInit {
   cars: Array<any>;

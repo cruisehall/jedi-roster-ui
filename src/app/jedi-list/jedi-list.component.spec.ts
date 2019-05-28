@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JediEditComponent } from './car-edit.component';
+import { JediListComponent } from './jedi-list.component';
 
-describe('JediEditComponent', () => {
-  let component: JediEditComponent;
-  let fixture: ComponentFixture<JediEditComponent>;
+describe('JediListComponent', () => {
+  let component: JediListComponent;
+  let fixture: ComponentFixture<JediListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JediEditComponent ]
+      declarations: [ JediListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JediEditComponent);
+    fixture = TestBed.createComponent(JediListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

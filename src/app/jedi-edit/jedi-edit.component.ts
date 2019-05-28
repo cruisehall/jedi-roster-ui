@@ -6,9 +6,9 @@ import { NgForm } from '@angular/forms';
 import { GiphyService } from '../shared/giphy/giphy.service';
 
 @Component({
-  selector: 'app-car-edit',
-  templateUrl: './car-edit.component.html',
-  styleUrls: ['./car-edit.component.css']
+  selector: 'app-jedi-edit',
+  templateUrl: './jedi-edit.component.html',
+  styleUrls: ['./jedi-edit.component.css']
 })
 export class JediEditComponent implements OnInit, OnDestroy {
   car: any = {};
@@ -44,7 +44,7 @@ export class JediEditComponent implements OnInit, OnDestroy {
   }
 
   gotoList() {
-    this.router.navigate(['/car-list']);
+    this.router.navigate(['/jedi-list']);
   }
 
   save(form: NgForm) {
