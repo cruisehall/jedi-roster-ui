@@ -1,3 +1,5 @@
+Taken straight outta [this sample](https://github.com/cruisehall/okta-spring-boot-2-angular-7-example).
+
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
