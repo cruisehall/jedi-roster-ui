@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
-export class CarService {
+export class JediService {
   public API = '//localhost:8080';
   public CAR_API = this.API + '/cars';
 

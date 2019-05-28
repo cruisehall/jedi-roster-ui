@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CarService } from '../shared/car/car.service';
+import { JediService } from '../shared/car/car.service';
 import { NgForm } from '@angular/forms';
 import { GiphyService } from '../shared/giphy/giphy.service';
 
@@ -10,14 +10,14 @@ import { GiphyService } from '../shared/giphy/giphy.service';
   templateUrl: './car-edit.component.html',
   styleUrls: ['./car-edit.component.css']
 })
-export class CarEditComponent implements OnInit, OnDestroy {
+export class JediEditComponent implements OnInit, OnDestroy {
   car: any = {};
 
   sub: Subscription;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private carService: CarService,
+              private carService: JediService,
               private giphyService: GiphyService) {
   }
 
@@ -31,7 +31,7 @@ export class CarEditComponent implements OnInit, OnDestroy {
             this.car.href = car._links.self.href;
             this.giphyService.get(car.name).subscribe(url => car.giphyUrl = url);
           } else {
-            console.log(`Car with id '${id}' not found, returning to list`);
+            console.log(`Jedi with id '${id}' not found, returning to list`);
             this.gotoList();
           }
         });

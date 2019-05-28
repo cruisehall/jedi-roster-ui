@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarService } from '../shared/car/car.service';
+import { JediService } from '../shared/car/car.service';
 import { GiphyService } from '../shared/giphy/giphy.service';
 
 @Component({
@@ -7,10 +7,10 @@ import { GiphyService } from '../shared/giphy/giphy.service';
   templateUrl: './car-list.component.html',
   styleUrls: ['./car-list.component.css']
 })
-export class CarListComponent implements OnInit {
+export class JediListComponent implements OnInit {
   cars: Array<any>;
 
-  constructor(private carService: CarService, private giphyService: GiphyService) { }
+  constructor(private carService: JediService, private giphyService: GiphyService) { }
 
   ngOnInit() {
     this.carService.getAll().subscribe(data => {
