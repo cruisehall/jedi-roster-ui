@@ -10,10 +10,10 @@ import { GiphyService } from '../shared/giphy/giphy.service';
 export class JediListComponent implements OnInit {
   jedis: Array<any>;
 
-  constructor(private carService: JediService, private giphyService: GiphyService) { }
+  constructor(private jediService: JediService, private giphyService: GiphyService) { }
 
   ngOnInit() {
-    this.carService.getAll().subscribe(data => {
+    this.jediService.getAll().subscribe(data => {
       this.jedis = data;
       for (const car of this.jedis) {
         this.giphyService.get(car.name).subscribe(url => car.giphyUrl = url);

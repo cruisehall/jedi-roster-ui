@@ -17,7 +17,7 @@ export class JediEditComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private carService: JediService,
+              private jediService: JediService,
               private giphyService: GiphyService) {
   }
 
@@ -25,7 +25,7 @@ export class JediEditComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
       if (id) {
-        this.carService.get(id).subscribe((car: any) => {
+        this.jediService.get(id).subscribe((car: any) => {
           if (car) {
             this.car = car;
             this.car.href = car._links.self.href;
@@ -48,13 +48,13 @@ export class JediEditComponent implements OnInit, OnDestroy {
   }
 
   save(form: NgForm) {
-    this.carService.save(form).subscribe(result => {
+    this.jediService.save(form).subscribe(result => {
       this.gotoList();
     }, error => console.error(error));
   }
 
   remove(href) {
-    this.carService.remove(href).subscribe(result => {
+    this.jediService.remove(href).subscribe(result => {
       this.gotoList();
     }, error => console.error(error));
   }
